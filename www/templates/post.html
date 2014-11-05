@@ -1,0 +1,13 @@
+<ion-view title="Shallot">
+<ion-content class="padding">
+<form ng-submit="submitPost()" class="list">
+	<label class="item item-input">
+		<input type="text" ng-model="post.text" pattern=".{3,}" required title="5 to 10 characters" />
+	</label>
+	<input class="button button-block button-positive" type="submit" value="Add Post" />
+</form>
+<div ng-repeat="post in posts">
+	<button ng-click="deletePost($index)" class="button button-block button-assertive">{{ post.text }}</button>
+</div>
+</ion-content>
+</ion-view>
